@@ -1,12 +1,28 @@
 @import url('components/header.css');
 @import url('components/footer.css');
+@import url('components/top-screen.css');
 
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
+    background: #1C1C1C;
 }
 
 .page-container {
     max-width: 1440px;
     margin: auto;
+}
+
+.primary-btn {
+    background: linear-gradient(92.51deg, #14244C 0.48%, #459AFE 100%);
+    box-shadow: 4px 4px 10px 0px #00000059;
+    border-radius: 12px;
+    padding: 12px 30px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    cursor: pointer;
 }

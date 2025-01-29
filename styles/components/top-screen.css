@@ -1,0 +1,97 @@
+.top-screen-container {
+    border-radius: 40px;
+    background: #1C1C1C;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 170px;
+    background: linear-gradient(92.51deg, #14244C 0.48%, #459AFE 100%);
+    margin-top: -130px;
+    box-shadow: 0px 13px 35px 0px #00000059;
+}
+
+.top-screen-container .top-screen-inner {
+    padding: 174px 40px 4px;
+    background: #1C1C1C;
+    z-index: 1;
+    position: relative;
+}
+
+.top-screen-container .top-screen-inner .title {
+    font-size: 64px;
+    line-height: 80px;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+    max-width: 775px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto 30px auto;
+}
+
+.top-screen-container .top-screen-inner .subtitle {
+    font-size: 16px;
+    line-height: 20px;
+    color: #9E9E9E;
+    text-align: center;
+    max-width: 433px;
+    margin: 0 auto 30px auto;
+    width: 100%;
+}
+
+.top-screen-inner button {
+    margin: auto;
+    display: flex;
+}
+
+.top-screen-container .parallax-1 {
+    position: absolute;
+    left: 66px;
+    bottom: 164px;
+    animation: MoveInCircleReversed 30s linear infinite;
+    animation-delay: 2s;
+    z-index: 100;
+}
+
+.top-screen-container .parallax-2 {
+    position: absolute;
+    left: 55%;
+    top: 41px;
+    animation: MoveInCircleReversed 20s linear infinite;
+    z-index: 100;
+}
+
+.top-screen-container .parallax-3 {
+    position: absolute;
+    right: 60px;
+    top: 238px;
+    animation: MoveInCircleReversed 40s linear infinite;
+    z-index: 100;
+}
+
+.top-screen-container .radius-element {
+    height: 320px;
+    width: 140%;
+    position: absolute;
+    bottom: 86px;
+    background: #1C1C1C;
+    border-radius: 0 0 50% 50%;
+    margin-left: -20%;
+}
+
+@keyframes MoveInCircleReversed {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(100px, -100px) rotate(-90deg);
+    }
+    50% {
+        transform: translate(0, -150px) rotate(-180deg);
+    }
+    75% {
+        transform: translate(-100px, -100px) rotate(-270deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(-360deg);
+    }
+}

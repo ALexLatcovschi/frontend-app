@@ -3,6 +3,7 @@
     width: 100vw;
     margin-left: calc((100vw - 1440px) / -2);
     height: 292px;
+    position: relative;
 }
 
 .header-inner {
@@ -49,4 +50,14 @@
 
 .header-inner .languages .language.active {
     font-weight: bold;
+}
+
+header .radius-element {
+    height: 500px;
+    width: 140%;
+    position: absolute;
+    bottom: -420px;
+    background: #1C1C1C;
+    border-radius: 50% 50% 0 0;
+    margin-left: -20%;
 }

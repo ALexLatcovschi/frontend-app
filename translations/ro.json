@@ -6,5 +6,10 @@
       "contacts": "Contacte"
     },
     "share": "Distribuie",
-    "copyright": "Toate drepturile rezervate Naqqa"
+    "copyright": "Toate drepturile rezervate Naqqa",
+    "topScreen": {
+      "title": "Landing Page Sample pentru practică",
+      "subtitle": "Un design bun nu este doar plăcut din punct de vedere estetic, ci și funcțional.",
+      "button": "AFLĂ MAI MULT"
+    }
   }
