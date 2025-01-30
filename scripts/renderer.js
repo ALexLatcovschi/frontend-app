@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     await loadComponent('reviews', '../../components/reviews.html');
     loadReviews();
 
+    await loadComponent('contacts', '../../components/contacts.html');
+
     await loadComponent('map', '../../components/map.html');
     loadMap();
 

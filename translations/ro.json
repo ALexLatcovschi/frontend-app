@@ -50,5 +50,12 @@
         "user4": "Jane Doe",
         "position4": "CEO of Inkyy.com"
       }
+    },
+    "contacts": {
+      "title": "Contacte",
+      "addressLabel": "Adresa: ",
+      "addressDescription": "Bulevardul Ștefan cel Mare și Sfînt 105, MD-2073, Chișinău",
+      "phoneLabel": "Tel.: ",
+      "followUs": "Dă-ne un follow pe:"
     }
   }
