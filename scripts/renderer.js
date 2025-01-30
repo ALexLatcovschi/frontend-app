@@ -28,5 +28,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     await loadComponent('reviews', '../../components/reviews.html');
     loadReviews();
 
+    await loadComponent('map', '../../components/map.html');
+    loadMap();
+
     await initTranslation();
 })

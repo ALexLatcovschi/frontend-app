@@ -1,0 +1,6 @@
+.map-container {
+    height: 520px;
+    width: 100vw;
+    margin-left: calc((100vw - 1440px) / -2);
+    margin-top: 100px;
+}

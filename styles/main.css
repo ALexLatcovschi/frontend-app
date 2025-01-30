@@ -4,6 +4,7 @@
 @import url('components/characteristics.css');
 @import url('components/expertise.css');
 @import url('components/reviews.css');
+@import url('components/map.css');
 
 body {
     font-family: 'Poppins', sans-serif;
