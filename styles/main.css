@@ -3,6 +3,7 @@
 @import url('components/top-screen.css');
 @import url('components/characteristics.css');
 @import url('components/expertise.css');
+@import url('components/reviews.css');
 
 body {
     font-family: 'Poppins', sans-serif;
