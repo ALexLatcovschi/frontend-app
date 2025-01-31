@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     loadFAQ();
 
     await loadComponent('contacts', '../../components/contacts.html');
+    await loadComponent('contact-form', '../../components/form.html');
+    initForm();
 
     await loadComponent('map', '../../components/map.html');
     loadMap();

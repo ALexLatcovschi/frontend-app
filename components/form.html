@@ -1,0 +1,22 @@
+<form class="form-container" id="contacts-form">
+    <div class="title" data-key="contactForm.title"></div>
+    <div class="label" data-key="contactForm.label"></div>
+
+    <div class="controls-group">
+        <div class="form-control">
+            <input type="text" name="name" id="name" placeholder="contactForm.namePlaceholder">
+            <div class="error-message" id="name-error" data-key="contactForm.errors.nameError"></div>
+        </div>
+
+        <div class="form-control">
+            <input type="email" name="email" id="email" placeholder="contactForm.emailPlaceholder">
+            <div class="error-message" id="email-error" data-key="contactForm.errors.emailError"></div>
+        </div>
+
+        <div class="form-control">
+            <textarea name="message" id="message" placeholder="contactForm.messagePlaceholder" rows="4"></textarea>
+        </div>
+    </div>
+
+    <button class="primary-btn" data-key="contactForm.buttonLabel" type="submit"></button>
+</form>

@@ -8,16 +8,27 @@
 @import url('components/map.css');
 @import url('components/banner.css');
 @import url('components/faq.css');
+@import url('components/form.css');
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     background: #1C1C1C;
+    overflow-x: hidden;
 }
 
 .page-container {
     max-width: 1440px;
     margin: auto;
+}
+
+.primary-href {
+    text-decoration: none;
 }
 
 .primary-btn {
@@ -48,20 +59,29 @@ body {
     cursor: pointer;
 }
 
+.app-label {
+    font-size: 16px;
+    line-height: 20px;
+    color: #9E9E9E;
+}
 
 @keyframes MoveInCircleReversed {
     0% {
         transform: translate(0, 0) rotate(0deg);
     }
+
     25% {
         transform: translate(100px, -100px) rotate(-90deg);
     }
+
     50% {
         transform: translate(0, -150px) rotate(-180deg);
     }
+
     75% {
         transform: translate(-100px, -100px) rotate(-270deg);
     }
+
     100% {
         transform: translate(0, 0) rotate(-360deg);
     }

@@ -4,7 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modular Website</title>
+    
+    <title>Курс по созданию сайтов - HTML, CSS, JS</title>
+    <meta name="title" content="Курс по созданию сайтов - HTML, CSS, JS">
+    <meta name="description" content="Изучите, как создавать профессиональные сайты с нуля, используя HTML, CSS и JavaScript. Идеальный курс для начинающих и продвинутых.">
+
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="курс создание сайтов, HTML, CSS, JavaScript, обучение веб-разработке, курс веб-дизайна">
+    <meta name="author" content="Naqqa">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Russian">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eduqqation.com">
+    <meta property="og:title" content="Курс по созданию сайтов - HTML, CSS, JS">
+    <meta property="og:description" content="Изучите, как создавать профессиональные сайты с помощью HTML, CSS и JavaScript.">
+    <meta property="og:image" content="../../assets/images/meta/meta.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://eduqqation.com">
+    <meta property="twitter:title" content="Курс по созданию сайтов - HTML, CSS, JS">
+    <meta property="twitter:description" content="Изучите, как создавать профессиональные сайты с помощью HTML, CSS и JavaScript.">
+    <meta property="twitter:image" content="../../assets/images/meta/meta.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -12,14 +36,19 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../../styles/main.css">
 
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 </head>
 
 <body>
@@ -28,9 +57,55 @@
     <script src="../../scripts/translate.js"></script>
     <script src="../../scripts/map.js"></script>
     <script src="../../scripts/faq.js"></script>
+    <script src="../../scripts/contact-form.js"></script>
     <script src="../../scripts/renderer.js"></script>
     <script src="../../scripts/social-share.js"></script>
     <script src="../../scripts/reviews.js"></script>
+
+    <script>
+        window.showToastr = (type, title, message) => {
+            if (type === 'success') {
+                toastr.success(title, message);
+            } else if (type === 'error') {
+                toastr.error(title, message);
+            }
+        }
+    </script>
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+        import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyD-1FN0ZKVM1BdPPBsZBqHa_Dg7spqUZvw",
+            authDomain: "course-fe-app.firebaseapp.com",
+            projectId: "course-fe-app",
+            storageBucket: "course-fe-app.firebasestorage.app",
+            messagingSenderId: "763826909882",
+            appId: "1:763826909882:web:497082509622d2d4a08883",
+            measurementId: "G-EVWDMC5NXZ"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        window.saveData = (payload, form) => {
+            const dataRef = ref(database, 'contacts');
+            push(dataRef, payload)
+                .then(() => {
+                    form.reset();
+                    window.showToastr('success', 'Success!', '');
+                })
+                .catch((error) => window.showToastr('error', 'Error!', ''));
+        };
+    </script>
 </body>
 
 </html>

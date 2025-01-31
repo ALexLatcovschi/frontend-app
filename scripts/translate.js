@@ -23,6 +23,14 @@ function applyTranslations(translations) {
             element.textContent = value;
         }
     });
+
+    document.querySelectorAll('[placeholder]').forEach((element) => {
+        const key = element.getAttribute('placeholder');
+        const value = getNestedValue(translations, key);
+        if (value) {
+            element.placeholder = value;
+        }
+    });
 }
 
 async function setLanguage(language) {
