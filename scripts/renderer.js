@@ -53,8 +53,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     await loadComponent('header', '../../components/header.html');
     await loadComponent('top-screen', '../../components/top-screen.html');
 
-    // await loadComponent('footer', '../../components/footer.html');
-    // document.getElementById('year').textContent = new Date().getFullYear();
+    await loadComponent('footer', '../../components/footer.html');
+    document.getElementById('year').textContent = new Date().getFullYear();
 
     // await loadComponent('characteristics', '../../components/characteristics.html');
     // await loadComponent('expertise', '../../components/expertise.html');
