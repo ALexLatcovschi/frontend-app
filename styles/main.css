@@ -44,6 +44,10 @@ body {
     overflow-x: hidden;
 }
 
+#main {
+    min-height: 100vh;
+}
+
 .page-container {
     max-width: 1440px;
     margin: auto;
