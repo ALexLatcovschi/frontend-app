@@ -36,3 +36,34 @@
     top: 0;
     background-repeat: no-repeat;
 }
+
+@media (max-width: 1440px) {
+    .banner-container {
+        margin: 40px 20px 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .banner-container {
+        padding: 20px
+    }
+
+    .banner-container .right-child {
+        display: none;
+    }
+
+    .banner-container .left-child {
+        width: 100%;
+    }
+
+    .banner-container .label {
+        font-size: 10px;
+        line-height: 20px;
+    }
+
+    .banner-container .title {
+        font-size: 26px;
+        line-height: 36px;
+        margin-bottom: 10px;
+    }
+}
