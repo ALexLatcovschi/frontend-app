@@ -60,7 +60,7 @@ async function setLanguage(language) {
 
 function getLanguagePath() {
     const pathSegments = window.location.pathname.split('/').filter(el => el);
-    return pathSegments[pathSegments.length - 2];
+    return pathSegments[pathSegments.length - 1];
 }
 
 function getLanguageFromPath() {
