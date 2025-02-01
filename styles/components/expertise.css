@@ -125,9 +125,68 @@
 }
 
 @keyframes rotations {
-    to { transform: rotate(360deg) }
+    to {
+        transform: rotate(360deg)
+    }
 }
 
 @keyframes rotationsReverse {
-    to { transform: rotate(-360deg) }
+    to {
+        transform: rotate(-360deg)
+    }
+}
+
+@media (max-width: 1440px) {
+    .expertise-container {
+        margin: 0 20px;
+        padding-top: 40px;
+    }
+}
+
+@media (max-width: 991px) {
+    .expertise-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .expertise-container .left-child,
+    .expertise-container .right-child {
+        width: 100%;
+    }
+
+    .expertise-container .left-child .layer1 {
+        margin: auto;
+    }
+
+    .expertise-container .right-child {
+        padding-left: 0;
+    }
+
+    .expertise-container .right-child .title {
+        font-size: 18px;
+        line-height: 31px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .expertise-container .left-child {
+        display: flex;
+        justify-content: center;
+    }
+
+    .expertise-container .left-child .layer1 {
+        transform: scale(0.6);
+    }
+}
+
+@media (max-width: 550px) {
+    .expertise-container .left-child {
+        height: 300px;
+    }
+
+    .expertise-container .left-child .layer1 {
+        transform: scale(0.4);
+        margin-top: -170px;
+    }
 }

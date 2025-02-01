@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('year').textContent = new Date().getFullYear();
 
     await loadComponent('characteristics', '../../components/characteristics.html');
-    // await loadComponent('expertise', '../../components/expertise.html');
+    await loadComponent('expertise', '../../components/expertise.html');
 
     // await loadComponent('reviews', '../../components/reviews.html');
     // loadReviews();
