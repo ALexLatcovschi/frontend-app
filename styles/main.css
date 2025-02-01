@@ -10,6 +10,28 @@
 @import url('components/faq.css');
 @import url('components/form.css');
 
+@keyframes MoveInCircleReversed {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(100px, -100px) rotate(-90deg);
+    }
+
+    50% {
+        transform: translate(0, -150px) rotate(-180deg);
+    }
+
+    75% {
+        transform: translate(-100px, -100px) rotate(-270deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(-360deg);
+    }
+}
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -65,24 +87,66 @@ body {
     color: #9E9E9E;
 }
 
-@keyframes MoveInCircleReversed {
-    0% {
-        transform: translate(0, 0) rotate(0deg);
+.loader {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 20px -5px rgba(255, 255, 255, 0.5),
+        inset 0 -40px 40px -20px rgba(255, 255, 255, 0.5);
+    background: linear-gradient(#459AFE 120px, transparent 0) no-repeat;
+    background-position: 0px 120px;
+    animation: fillLq 2s linear infinite alternate;
+    display: inline-flex;
+}
+
+.loader:before {
+    position: absolute;
+    content: '';
+    width: 40%;
+    height: 25%;
+    top: 20px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: rotate(-45deg);
+}
+
+@keyframes fillLq {
+
+    0%,
+    10% {
+        background-position: 0 120px
     }
 
-    25% {
-        transform: translate(100px, -100px) rotate(-90deg);
-    }
-
-    50% {
-        transform: translate(0, -150px) rotate(-180deg);
-    }
-
-    75% {
-        transform: translate(-100px, -100px) rotate(-270deg);
-    }
-
+    90%,
     100% {
-        transform: translate(0, 0) rotate(-360deg);
+        background-position: 0 0
     }
+}
+
+.loader-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+}
+
+#main-container {
+    display: none;
+}
+
+#main-container.visible {
+    display: block;
+}
+
+.loader-container.hidden {
+    display: none;
 }

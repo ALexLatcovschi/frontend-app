@@ -13,6 +13,19 @@ async function loadComponent(targetId, filePath) {
     }
 }
 
+function hideLoader() {
+    const main = document.getElementById('main-container');
+    const loader = document.getElementById('loader');
+
+    if (main) {
+        main.classList.add('visible');
+
+        if (loader) {
+            loader.classList.add('hidden');
+        }
+    }
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
     await loadComponent('main', '../../components/main.html');
 
@@ -24,7 +37,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     await loadComponent('characteristics', '../../components/characteristics.html');
     await loadComponent('expertise', '../../components/expertise.html');
-    
+
     await loadComponent('reviews', '../../components/reviews.html');
     loadReviews();
 
@@ -37,7 +50,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     initForm();
 
     await loadComponent('map', '../../components/map.html');
-    loadMap();
 
     await initTranslation();
+
+    setTimeout(() => {
+        hideLoader();
+
+        loadMap();
+    }, 1000);
 })
