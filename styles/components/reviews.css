@@ -103,3 +103,65 @@
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background: #FFFFFFCC;
 }
+
+@media (max-width: 1440px) {
+    .reviews-container {
+        margin: 0 20px;
+        padding-top: 40px;
+        width: auto;
+    }
+}
+
+@media (max-width: 991px) {
+    .reviews-container .title {
+        font-size: 26px;
+        line-height: 36px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    .swiper-backface-hidden .swiper-slide {
+        padding: 15px;
+    }
+
+    .swiper-slide .label {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 20px;
+    }
+
+    .swiper-slide .separator {
+        margin-bottom: 20px;
+    }
+
+    .swiper-slide .bottom-element .left-child .author-image {
+        width: 30px;
+        height: 30px;
+    }
+
+    .swiper-slide .bottom-element .left-child .name {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .swiper-slide .bottom-element .left-child .position {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets {
+        margin-top: 20px;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .swiper-container {
+        padding: 0 40px;
+        margin-left: -20px;
+    }
+}

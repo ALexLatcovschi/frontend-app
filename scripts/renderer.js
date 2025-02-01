@@ -59,8 +59,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     await loadComponent('characteristics', '../../components/characteristics.html');
     await loadComponent('expertise', '../../components/expertise.html');
 
-    // await loadComponent('reviews', '../../components/reviews.html');
-    // loadReviews();
+    await loadComponent('reviews', '../../components/reviews.html');
+    loadReviews();
 
     // await loadComponent('banner', '../../components/banner.html');
     // await loadComponent('faq', '../../components/faq.html');
