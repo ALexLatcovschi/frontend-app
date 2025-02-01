@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     loadReviews();
 
     await loadComponent('banner', '../../components/banner.html');
-    // await loadComponent('faq', '../../components/faq.html');
-    // loadFAQ();
+    await loadComponent('faq', '../../components/faq.html');
+    loadFAQ();
 
     // await loadComponent('contacts', '../../components/contacts.html');
     // await loadComponent('contact-form', '../../components/form.html');
