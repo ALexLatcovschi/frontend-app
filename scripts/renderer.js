@@ -32,9 +32,13 @@ function toggleHamburgerMenu() {
 
     if (mobileMenu) {
         if (mobileMenu.classList.contains('active')) {
-            mobileMenu.classList.remove('active')
+            mobileMenu.classList.remove('active');
+            document.body.style.overflowY = 'auto';
+            document.documentElement.style.overflowY = 'auto';
         } else {
-            mobileMenu.classList.add('active')
+            mobileMenu.classList.add('active');
+            document.body.style.overflowY = 'hidden';
+            document.documentElement.style.overflowY = 'hidden';
         }
     }
 
@@ -66,9 +70,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     await loadComponent('faq', '../../components/faq.html');
     loadFAQ();
 
-    // await loadComponent('contacts', '../../components/contacts.html');
-    // await loadComponent('contact-form', '../../components/form.html');
-    // initForm();
+    await loadComponent('contacts', '../../components/contacts.html');
+    await loadComponent('contact-form', '../../components/form.html');
+    initForm();
 
     // await loadComponent('map', '../../components/map.html');
 

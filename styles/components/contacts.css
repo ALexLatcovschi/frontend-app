@@ -92,3 +92,68 @@
     animation: MoveInCircleReversed 20s linear infinite;
     z-index: 100;
 }
+
+@media (max-width: 1440px) {
+    .contacts-container {
+        margin: 40px 20px 0;
+        width: auto;
+    }
+}
+
+@media (max-width: 991px) {
+    .contacts-container {
+        display: block;
+    }
+
+    .contacts-container .left-child,
+    .contacts-container .right-child {
+        width: 100%;
+    }
+
+    .form-container .title,
+    .contacts-container .right-child .title {
+        font-size: 26px;
+        line-height: 36px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    #contact-form .form-container {
+        padding-right: 0;
+    }
+
+    #contacts-form.form-container .form-control input, 
+    #contacts-form.form-container .form-control textarea {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 12px 20px;
+    }
+
+    .form-control {
+        display: flex;
+    }
+
+    .contacts-container .right-child {
+        padding-left: 0;
+        padding-bottom: 0;
+        background: none;
+        margin-top: 40px;
+    }
+
+    .contacts-container .parallax-1,
+    .contacts-container .parallax-2 {
+        display: none;
+    }
+
+    .contacts-container .social-share .share {
+        width: 35px;
+        height: 35px;
+        margin-right: 20px;
+    }
+
+    .contacts-container .social-share .share img {
+        display: flex;
+        width: auto;
+        height: 18px;
+    }
+}
