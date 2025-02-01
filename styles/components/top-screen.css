@@ -12,7 +12,6 @@
 .top-screen-container .top-screen-inner {
     padding: 174px 40px 4px;
     background: #1C1C1C;
-    z-index: 1;
     position: relative;
 }
 
@@ -26,6 +25,8 @@
     width: 100%;
     position: relative;
     margin: 0 auto 30px auto;
+    z-index: 100;
+    position: relative;
 }
 
 .top-screen-container .top-screen-inner .subtitle {
@@ -33,11 +34,15 @@
     max-width: 433px;
     margin: 0 auto 30px auto;
     width: 100%;
+    z-index: 100;
+    position: relative;
 }
 
 .top-screen-inner button {
     margin: auto;
     display: flex;
+    z-index: 100;
+    position: relative;
 }
 
 .top-screen-container .parallax-1 {
@@ -73,4 +78,31 @@
     background: #1C1C1C;
     border-radius: 0 0 50% 50%;
     margin-left: -20%;
+}
+
+@media (max-width: 1440px) {
+    .top-screen-container {
+        margin: -140px 20px 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .top-screen-container {
+        margin: -50px 20px 0;
+        padding-bottom: 120px;
+    }
+
+    .top-screen-container .radius-element {
+        height: 200px;
+    }
+
+    .top-screen-container .top-screen-inner {
+        padding: 130px 24px 0;
+    }
+
+    .top-screen-container .top-screen-inner .title {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 30px;
+    }
 }

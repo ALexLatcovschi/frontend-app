@@ -154,3 +154,22 @@ body {
 .loader-container.hidden {
     display: none;
 }
+
+@media (max-width: 991px) {
+    .app-label {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .primary-btn {
+        padding: 12px 30px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .secondary-btn {
+        padding: 12px 30px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
