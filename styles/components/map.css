@@ -4,3 +4,16 @@
     margin-left: calc((100vw - 1440px) / -2);
     margin-top: 100px;
 }
+
+@media (max-width: 1440px) {
+    .map-container {
+        margin: 40px 0 0;
+        width: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .map-container {
+        height: 250px;
+    }
+}

@@ -74,13 +74,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     await loadComponent('contact-form', '../../components/form.html');
     initForm();
 
-    // await loadComponent('map', '../../components/map.html');
+    await loadComponent('map', '../../components/map.html');
 
     await initTranslation();
 
     setTimeout(() => {
         hideLoader();
 
-        //     loadMap();
+        loadMap();
     }, 1000);
 })
